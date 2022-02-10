@@ -9,4 +9,4 @@ These commands can be used to build the docker image and run the docker image.
 
 ## Result
 
-`nginx: [emerg] unknown directive "aws_auth_presign" in /usr/local/nginx/conf/nginx.conf:9`. This is the result of running the command.
+Error: `nginx: [emerg] unknown directive "aws_auth_presign" in /usr/local/nginx/conf/nginx.conf:9`. This is the result of running the build command.
