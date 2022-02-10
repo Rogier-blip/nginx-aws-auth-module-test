@@ -6,7 +6,7 @@ RUN apk add --no-cache curl build-base openssl openssl-dev zlib-dev linux-header
 RUN mkdir nginx nginx-aws-auth-module
 
 ARG NGINX_VERSION=1.16.1
-ARG AWS_AUTH_MODULE_VERSION=fe27be2dff8b2f8de44790d46bd459f415495708
+ARG AWS_AUTH_MODULE_VERSION=dbbac974f0699328a63f497cd911a4f991faed9b
 
 RUN curl -sL https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz | tar -C /nginx --strip 1 -xz
 RUN curl -sL https://github.com/kaltura/nginx-aws-auth-module/archive/${AWS_AUTH_MODULE_VERSION}.tar.gz | tar -C /nginx-aws-auth-module --strip 1 -xz
