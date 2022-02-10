@@ -1,5 +1,5 @@
 # Setup
-These commands can be used to build the docker image and run the docker image.
+This repo holds an example of a Dockerfile with a nginx and the module nginx-aws-auth-module included.  
 
 ## Docker build
 `docker build . -t nginx-aws-auth`
@@ -7,6 +7,3 @@ These commands can be used to build the docker image and run the docker image.
 ## Docker run
 `docker run -p 3000:80 nginx-aws-auth`
 
-## Result
-
-Error: `nginx: [emerg] unknown directive "aws_auth_presign" in /usr/local/nginx/conf/nginx.conf:9`. This is the result of running the build command.
