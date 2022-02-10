@@ -22,12 +22,7 @@ RUN make
 RUN make install
 RUN rm -rf /usr/local/nginx/html /usr/local/nginx/conf/*.default
 
-#-alpine
 FROM base_image
-# Extract the dynamic module NCHAN from the builder image
-#COPY --from=build /usr/src/nginx/nginx-${NGINX_VERSION}/objs/*_module.so /etc/nginx/modules/
-#COPY --from=build /usr/local/nginx/nginx-aws-auth-module.so /usr/local/nginx/modules/nginx-aws-auth-module.so
-# TODO: I would prefer to only copy the module
 RUN apk add --no-cache ca-certificates openssl pcre zlib ffmpeg
 
 COPY --from=build /usr/local/nginx /usr/local/nginx
