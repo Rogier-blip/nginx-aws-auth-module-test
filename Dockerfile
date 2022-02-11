@@ -5,7 +5,7 @@ FROM base_image AS build
 RUN apk add --no-cache curl build-base openssl openssl-dev zlib-dev linux-headers pcre-dev
 RUN mkdir nginx nginx-aws-auth-module
 
-ARG NGINX_VERSION=1.16.1
+ARG NGINX_VERSION=1.20.1
 # Commit relate to a certain release from nginx-aws-auth-module
 ARG AWS_AUTH_MODULE_VERSION=dbbac974f0699328a63f497cd911a4f991faed9b
 
